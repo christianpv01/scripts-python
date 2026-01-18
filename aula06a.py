@@ -1,0 +1,10 @@
+print('====== DESAFIO 03 ======')
+print('Informe dois valores')
+v1 = int(input('1º Valor: '))
+v2 = int(input('2º Valor: '))
+soma = v1 + v2
+print()
+#print('A soma entre os valores',v1,'+',v2,'=',soma)
+print('A soma entre os valores {} + {} = {}'.format(v1,v2,soma))
+print()
+print('====== FIM DO PROGRAMA ======')
