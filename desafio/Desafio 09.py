@@ -6,6 +6,6 @@ numero = int(input('Qual número você gostaria de visualizar a sua tabuada? '))
 auxiliar = 1
 produto = numero * auxiliar
 while auxiliar <= 10 :
-    print('{} x {} = {}'.format(numero, auxiliar, produto))
+    print('{} x {:2} = {}'.format(numero, auxiliar, produto))
     auxiliar = auxiliar + 1
     produto = numero * auxiliar
