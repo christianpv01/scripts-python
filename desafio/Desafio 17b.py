@@ -1,0 +1,8 @@
+print('{0} Desafio 17 {0}'.format('='*10))
+print('')
+print(' Vamos calcular a hipotenusa')
+catetoOP = float(input(' Digite o valor do cateto oposto: '))
+catetoAD = float(input(' Digite o valor do cateto adjacente: '))
+hipotenusa = float((catetoOP**2 + catetoAD**2)**0.5)
+print(' >>> O valor da hipotenusa é {:.2f}'.format(hipotenusa))
+print('')
