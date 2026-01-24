@@ -8,8 +8,6 @@ nome1 = input('Qual o nome do 1º aluno? ')
 nome2 = input('Qual o nome do 2º aluno? ')
 nome3 = input('Qual o nome do 3º aluno? ')
 nome4 = input('Qual o nome do 4º aluno? ')
-nomes = random.choice([nome1,nome2,nome3,nome4])
-print('')
-for i in range(5):
-    if i += 1:
-        print(nomes)
+nomes = [nome1,nome2,nome3,nome4]
+fila = random.shuffle(nomes)
+print(fila)
