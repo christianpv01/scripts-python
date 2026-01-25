@@ -10,4 +10,4 @@ nome3 = input('Qual o nome do 3º aluno? ')
 nome4 = input('Qual o nome do 4º aluno? ')
 lista = [nome1,nome2,nome3,nome4]
 fila = shuffle(lista)
-print('A ordem da apresentação dos trabalhos vai ser ',lista)
+print('A ordem da apresentação será\n',lista)
