@@ -5,8 +5,9 @@
 #Quantas letras tem o primeiro nome
 print('{0} Desafio 22 {0}'.format('='*10))
 nome = input('Diga o seu nome completo: ')
+print('Analisando seu nome..')
 print('Nome em maiúsculo: ',nome.upper()) #Toda string em maiúsculo
 print('Nome em minúsculo: ',nome.lower()) #Toda string em minúsculo
-print('Quantas letras possui sem espaço: ',len(''.join(nome.split()))) #Quantidade de caractere sem considerar os espaços
+print('Seu nome possui {} letras.'.format(len(''.join(nome.split())))) #Quantidade de caractere sem considerar os espaços
 nomeSplit = nome.split()
-print('Primeiro nome: {}'.format(nomeSplit[0]))
+print('Primeiro nome: {} tem {} letras.'.format(nomeSplit[0],len(nomeSplit[0])))
