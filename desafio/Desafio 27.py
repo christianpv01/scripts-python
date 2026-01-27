@@ -4,7 +4,6 @@
 #primeiro = Ana
 #último = Souza
 print('{0} Desafio 27 {0}'.format('='*10))
-nome = input(' Informe o nome completo: ')
-nomeSplit = nome.split()
-print(' Primeiro nome: ',min(nomeSplit))
-print(' Último nome:   ',max(nomeSplit))
+nome = input(' Informe o nome completo: ').strip().split()
+print(' Primeiro nome: ',min(nome))
+print(' Último nome:   ',max(nome))
