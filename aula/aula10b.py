@@ -1,5 +1,6 @@
 nome = str(input('Qual é seu nome? '))
 if nome == 'Christian':
-    print('Que nome bonito, seja bem-vindo {}'.format(nome))
+    print('Que nome bonito!')
 else:
-    print('Seja bem-vindo, {}'.format(nome))
+    print('Que nome normal.')
+print('Seja bem-vindo, {}'.format(nome))
