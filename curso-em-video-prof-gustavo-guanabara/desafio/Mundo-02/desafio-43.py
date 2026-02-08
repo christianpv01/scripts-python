@@ -1,10 +1,10 @@
-'''Desenvolva uma lógica que leia o peso e a altura de uma pessoa, calcule seu IMC e
-    mostre seu status, de acordo com a tabela abaixo:
+'''Desenvolva uma lógica que leia o peso e a altura de uma pessoa, 
+    calcule seu IMC e mostre seu status, de acordo com a tabela abaixo:
     Abaixo de 18.5: Abaixo do peso
-    entre 18.5 e 25: Peso ideal
+    18.5 até 25: Peso ideal
     25 até 30: Sobrepeso
     30 até 40: Obesidade
-    acima de 40: Obesidade mórbida'''
+    40+: Obesidade mórbida'''
 layout = '='*20
 cores = {'limpa':'\033[m',
          'negativo':'\033[7m',
@@ -20,3 +20,18 @@ cores = {'limpa':'\033[m',
 print('{} {}Desafio 43{} {}'.format(layout,cores['negativo'],cores['limpa'],layout))
 print(' {}Calculadora de IMC:{}\n'.format(cores['branco_s'],cores['limpa']))
 print(' Informe abaixo o seu peso e altura.')
+altura = float(input(' Altura(m): '))
+peso = float(input(' Peso(kg): '))
+imc = peso / (altura**2)
+print('')
+if imc < 18.5:
+    print(' {}Classificação: Abaixo do peso ideal.\n Procure um médico para auxiliar.{}'.format(cores['vermelho_b'],cores['limpa']))
+elif imc >= 18.5 and imc < 25:
+    print(' {}Classificação: Peso ideal.\n Continue assim!!{}'.format(cores['verde_b'],cores['limpa']))
+elif imc >= 25 and imc < 30:
+    print(' {}Classificação: Sobrepeso.\n Vamos nos cuidar!!{}'.format(cores['amarelo_b'],cores['limpa']))
+elif imc >= 30 and imc < 40:
+    print(' {}Classificação: Obesidade.\n Procure um médico para auxiliar.{}'.format(cores['roxo_b'],cores['limpa']))
+else:
+    print(' {}Classificação: Obesidade mórbida.\n Por favor, procure um médico para auxiliar.{}'.format(cores['vermelho_b'],cores['limpa']))
+print('')
