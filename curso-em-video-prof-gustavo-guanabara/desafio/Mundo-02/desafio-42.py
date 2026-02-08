@@ -15,7 +15,7 @@ cores = {'limpa':'\033[m',
          'azul_b':'\033[1;34m',
          'roxo_b':'\033[1;35m'
          }
-print('{} {}Desafio 41{} {}'.format(layout,cores['negativo'],cores['limpa'],layout))
+print('{} {}Desafio 42{} {}'.format(layout,cores['negativo'],cores['limpa'],layout))
 print(' {}Tipos de triângulo:{}\n'.format(cores['branco_s'],cores['limpa']))
 print(' Informe abaixo o valor de três segmentos de reta.')
 l1 = float(input(' 1º Segmento: '))
