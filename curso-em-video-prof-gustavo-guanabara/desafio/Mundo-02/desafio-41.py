@@ -17,7 +17,7 @@ cores = {'limpa':'\033[m',
          'azul_b':'\033[1;34m',
          'roxo_b':'\033[1;35m'
          }
-print('{} {}Desafio 40{} {}'.format(layout,cores['negativo'],cores['limpa'],layout))
+print('{} {}Desafio 41{} {}'.format(layout,cores['negativo'],cores['limpa'],layout))
 print(' {}Classificador de categoria:{}\n'.format(cores['branco_s'],cores['limpa']))
 anoATUAL = 2026
 print(' Para verificarmos a sua classificação, informe')
