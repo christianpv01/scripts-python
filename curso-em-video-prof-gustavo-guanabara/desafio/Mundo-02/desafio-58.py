@@ -24,15 +24,15 @@ coresint = {
 from random import randint
 print('{} {}Desafio 58{} {}'.format(layout,cores['negativo'],cores['limpa'],layout))
 print(' {}Jogo da adivinhação.{}\n'.format(cores['branco_s'],cores['limpa']))
-computador = 0
+computador = randint(0,10)
 jogador = 11
 totjogadas = 0
 print(' Escolha um número entre 0 e 10.')
 while computador != jogador:
-    computador = randint(0,10)
+    #computador = randint(0,10) - Caso queira que o computador jogue outro número toda vez
     print('-' * 20)
     jogador = int(input(' Número: '))
-    print('\n O computador jogou: {}'.format(computador))
+    #print('\n O computador jogou: {}'.format(computador))
 
     totjogadas += 1
 if totjogadas == 1:
