@@ -21,7 +21,7 @@ from random import randint
 from time import sleep
 print(f'{'='*20} {cores["negativo"]}{'Desafio 68':^}{cores["limpa"]} {'='*20}')
 print(f' {cores['branco_s']}Par ou Ímpar usando break.{cores['limpa']}\n')
-
+vitorias = 0
 while True:
     parouimpar = {1:'PAR',2:'ÍMPAR'}
     escolhajog = 0   
@@ -47,11 +47,13 @@ while True:
         sleep(0.5)
         print('.',flush=True,end='')
         cont += 1
-    print(f'\n O computador escolheu o número {computador}, somando {soma}.')
+    print(f'\n O computador escolheu o número {computador}, somando {soma}.') 
     if escolhajog == resultado:
         print(f' {cores["verde_b"]}VOCÊ GANHOU!!{cores["limpa"]}')
-        print('~' * 52)
+        vitorias += 1
     else:
         print(f' {cores["vermelho_b"]}VOCÊ PERDEU!!{cores["limpa"]}')
-        print('~' * 52)
         break
+print('~' * 52)
+print(f' Você venceu {vitorias} vez(es).')
+print('~' * 52)
