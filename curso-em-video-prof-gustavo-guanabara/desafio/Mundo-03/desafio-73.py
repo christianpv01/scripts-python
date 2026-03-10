@@ -67,10 +67,10 @@ print(f'{cores["limpa"]}{'-'*52}')
 
 #Extra Exercício
 times = ('Palmeiras','São Paulo','Corinthians','Bahia','Fluminense','Athletico-PR','Bragantino','Grêmio','Chapecoense','Mirassol','Flamengo','Coritiba','Santos','Botafogo','Vitória','Remo','Atlético-MG','Internacional','Cruzeiro','Vasco')
-time = str(input(f' {cores["roxo_b"]}Para qual time você torce? '))
+time = str(input(f' {cores["roxo_b"]}Para qual time você torce? ')).title()
 while time not in times:
     print(' Time inválido, tente novamente.')
-    time = str(input(f' Digite novamente um time: '))
+    time = str(input(f' Digite novamente um time: ')).title()
 print(f' O seu time está na {times.index(time)+1}ª posição na tabela do Brasileirão 2026.')
 if times.index(time) < 4:
     print(f' E o {time} está no G-4 e classificado para ingressar na Copa Libertadores da América.')
