@@ -25,4 +25,10 @@ print(f' {cores['branco_s']}Número por extenso de 0 a 20.{cores['limpa']}')
 ext = ('zero','um','dois','três','quatro','cinco','seis','sete','oito','nove','dez','onze','doze','treze','catorze','quinze','dezesseis','dezessete','dezoito','dezenove','vinte')
 
 núm = int(input('\n Número entre 0 e 20\n Escolha: '))
+
+if núm < 0 or núm > 20:
+    while True:
+        núm = int(input('\n Tente novamente. Digite um número entre 0 e 20\n Escolha: '))
+        if núm >= 0 and núm <= 20:
+            break
 print(f' O número {núm} escrito por extenso -> {coresint[randint(1,6)]}{ext[núm].capitalize()}{cores["limpa"]}')
