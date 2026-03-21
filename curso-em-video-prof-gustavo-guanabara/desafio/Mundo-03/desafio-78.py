@@ -28,6 +28,23 @@ for v in range(0,5):
     
 print('-' * 52)
 print(f'Lista: {valores}')
-print(f'\nO maior valor foi {max(valores)} na {valores.index(max(valores))+1}ª posição')
-print(f'O menor valor foi {min(valores)} na {valores.index(min(valores))+1}ª posição')
+#Maior valor
+print(f'\nO maior valor foi {max(valores)} ',end='')
+if valores.count(max(valores)) == 1:
+    print(f'na {valores.index(max(valores))+1}ª posição')
+else:
+    print('nas posições ', end='')
+    for cmax, vmax in enumerate(valores):
+        if vmax == max(valores):
+            print(f'{cmax+1}ª', end=' ')
+#Menor valor        
+print(f'\nO menor valor foi {min(valores)} ', end='')
+if valores.count(min(valores)) == 1:
+    print(f'na {valores.index(min(valores))+1}ª posição')
+else:
+    print('nas posições ', end='')
+    for cmin, vmin in enumerate(valores):
+        if vmin == min(valores):
+            print(f'{cmin+1}ª', end=' ')
+print()
 print('-' * 52)
