@@ -29,33 +29,36 @@ for n in range(0,5):
     num = int(input('Digite um número: '))
     if n == 0:
         lista.append(num)
-    else:
-        for valor in enumerate(lista):
-            if lista[n-1] > num:
-                lista.append(num)
-            else:
-                lista.insert(n-1,num)
-            print(n,valor)
-
-
-'''    elif n == 1:
+    elif n == 1:
         if num > lista[0]:
             lista.append(num)
         else:
             lista.insert(0, num)
     elif n == 2:
-        if num > lista[0]:
-            lista.append(num)
+        if num < lista[0]:
+            lista.insert(0, num)
+        elif num > lista[0] and num < lista[1]:
+            lista.insert(1, num)
         else:
-            lista.insert()
+            lista.append(num)
     elif n == 3:
-        if num > lista[0]:
-            lista.append(num)
+        if num < lista[0]:
+            lista.insert(0, num)
+        elif num < lista[1]:
+            lista.insert(1, num)
         else:        
-            lista.insert()
+            lista.append(num)
     elif n == 4:
-        if num > lista[0]:
-            lista.append(num)
+        if num < lista[1]:
+            if num > lista[0] and num < lista[1]:
+                lista.insert(1, num)
+            else:
+                lista.insert(0, num)
+        elif num < lista[3]:
+            if num > lista[2] and num < lista[3]:
+                lista.insert(3, num)
+            else:
+                lista.insert(2, num)
         else:        
-            lista.insert()'''
-print(lista)
+            lista.append(num)
+print(f'Lista ordenada: {lista}')
