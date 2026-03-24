@@ -29,8 +29,12 @@ palpites = list()
 jogos = int(input('Quantos jogos deseja sortear? '))
 print()
 for c in range(0, jogos):
-    for count in range(0, 6):
-        palpites.append(randint(1,60))
-    print(f'{c+1}. Palpite: {palpites}')
+    for count in range(0, 6):       
+        num = randint(1,60)
+        while num in palpites:
+            num = randint(1,60)
+        palpites.append(num)
+    palpites.sort()    
+    print(f'{c+1:3}. Palpite: {palpites}')
     palpites.clear()
 print()
