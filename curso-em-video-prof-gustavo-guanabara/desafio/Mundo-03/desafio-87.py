@@ -21,8 +21,8 @@ coresint = {1:'\033[1;36m',                         #Dicionário de cores por in
             6:'\033[1;35m'}
 
 from random import randint
-print(f'{'='*20} {cores["negativo"]}{'Desafio 86':^}{cores["limpa"]} {'='*20}')
-print(f' {cores['branco_s']}Matriz 3x3.{cores['limpa']}')
+print(f'{'='*20} {cores["negativo"]}{'Desafio 87':^}{cores["limpa"]} {'='*20}')
+print(f' {cores['branco_s']}Matriz 3x3 v2.0.{cores['limpa']}')
 print()
 
 matriz = []
