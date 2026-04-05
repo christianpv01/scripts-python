@@ -21,6 +21,7 @@ coresint = {1:'\033[1;36m',                         #Dicionário de cores por in
             6:'\033[1;35m'}
 from random import randint
 from time import sleep
+from operator import itemgetter
 print(f'{'='*20} {cores["negativo"]}{'Desafio 91':^}{cores["limpa"]} {'='*20}')
 print(f' {cores['branco_s']}Sorte nos dados.{cores['limpa']}')
 print()
@@ -31,22 +32,19 @@ jogadores = {
             3: randint(1,6),
             4: randint(1,6)
             }
+rank = list()
 
 print(f'{coresint[randint(1,6)]} {f'_'*24} ')
 print(f'{'|'}{'Sorteio':_^24}{'|'}')
+print(f'{'|'}{f' '*24}{'|'}')
 for k, v in jogadores.items():
     print(f'{'|'}{f'O {k}º jogador tirou {v}':^24}{'|'}')
 print(f'{'|'}{f'_'*24}{'|'}{cores["limpa"]}')
 print('')
-
+rank = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
 print(f'{cores["amarelo_b"]} {f'_'*24} ')
 print(f'{'|'}{'Ranking':_^24}{'|'}')
-for c in range(1, 5):
-    for l in range(2, 5):
-        if jogadores[c] > jogadores[l]:
-            print(c,l)
-    print(f'{'|'}{f'{c}º Lugar: '}', end='')
-    print(f'{jogadores[c]}')
-    
+print(f'{'|'}{f' '*24}{'|'}')
+for c, i in enumerate(rank):
+    print(f'{'|'}{f'{c+1}º Lugar: Jogador{i[0]} com {i[1]}|'}')        
 print(f'{'|'}{f'_'*24}{'|'}{cores["limpa"]}')
-
