@@ -26,23 +26,27 @@ print(f' {cores['branco_s']}Sorte nos dados.{cores['limpa']}')
 print()
 
 jogadores = {
-            'jogador1': randint(1,6),
-            'jogador2': randint(1,6),
-            'jogador3': randint(1,6),
-            'jogador4': randint(1,6)
+            1: randint(1,6),
+            2: randint(1,6),
+            3: randint(1,6),
+            4: randint(1,6)
             }
 
 print(f'{coresint[randint(1,6)]} {f'_'*24} ')
 print(f'{'|'}{'Sorteio':_^24}{'|'}')
 for k, v in jogadores.items():
-    print(f'{'|'}{f'O {k} tirou {v}':^24}{'|'}')
+    print(f'{'|'}{f'O {k}º jogador tirou {v}':^24}{'|'}')
 print(f'{'|'}{f'_'*24}{'|'}{cores["limpa"]}')
 print('')
 
 print(f'{cores["amarelo_b"]} {f'_'*24} ')
 print(f'{'|'}{'Ranking':_^24}{'|'}')
 for c in range(1, 5):
+    for l in range(2, 5):
+        if jogadores[c] > jogadores[l]:
+            print(c,l)
     print(f'{'|'}{f'{c}º Lugar: '}', end='')
-    print(f'{jogadores.keys()}')
+    print(f'{jogadores[c]}')
     
 print(f'{'|'}{f'_'*24}{'|'}{cores["limpa"]}')
+
