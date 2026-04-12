@@ -51,6 +51,9 @@ def contador():
     i = int(input('Início: '))
     f = int(input('Fim: '))
     p = int(input('Passo: '))
+    while p == 0:
+        print('ERRO! Valor do Passo não pode ser 0.')
+        p = int(input('Passo: '))
     print(f'Contando de {i} até {f} de {p} em {p}: ',end='',flush=True)
     if i > f and p > 0:
         p *= -1
