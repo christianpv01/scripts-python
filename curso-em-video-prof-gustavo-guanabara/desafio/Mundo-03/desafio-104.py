@@ -32,22 +32,25 @@ def titulo():
 def fim():
     print(f'\n{' FIM DO PROGRAMA ':-^52}\n{'-'*52}')
 
-def leiaInt(núm):
+def leiaInt(msg):
     '''-> Lê o número digitado, não aceitado dados diferentes de números.
     :param núm: O número a ser lido.
     :return: O número digitado.'''
-
+    ok = False
+    valor = 0
     while True:
-        núm = input('Digite um número: ')
-        if isinstance(núm, int) == True:               #aqui o type() verifica se o número está em Int
-           break
+        n = str(input(msg))
+        if n.isnumeric():
+           valor = int(n)
+           ok = True
         else:
-           print('ERRO! O programa só aceita números inteiros.')
-           núm = input('Digite um número: ') 
-    print(f' >> O número digitado, foi {núm}.')
+           print(f'{cores["vermelho_b"]}ERRO! O programa só aceita números inteiros.{cores["limpa"]}')
+        if ok:
+            break
+    return valor
 
 
 titulo()
 número = leiaInt('Digite um número: ')
-
+print(f' >> O número digitado, foi {número}.')
 fim()
